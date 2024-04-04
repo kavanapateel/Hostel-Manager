@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/register_bg"
+    android:backgroundTint="#80121212"
+    android:backgroundTintMode="src_atop"
+    tools:context=".FeeStatusActivity">
+
+    <ImageButton
+        android:id="@+id/returnHomeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/teal_200"
+        android:contentDescription="@string/app_name"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.015"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.015"
+        app:srcCompat="?attr/actionModeCloseDrawable"
+        tools:ignore="ImageContrastCheck" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.1">
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_top"
+            android:backgroundTint="#BF121212"
+            android:gravity="center"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/filterButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_corners"
+                android:backgroundTint="#80F2F2F2"
+                android:importantForAccessibility="no"
+                android:minWidth="32dp"
+                android:minHeight="32dp"
+                android:padding="5dp"
+                app:srcCompat="@drawable/filter_icon" />
+
+            <EditText
+                android:id="@+id/searchText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:ems="10"
+                android:hint="Search"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:minHeight="48dp"
+                android:padding="10dp"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="#9E9E9E"
+                tools:ignore="HardcodedText" />
+
+            <ImageButton
+                android:id="@+id/searchButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_corners"
+                android:backgroundTint="#80F2F2F2"
+                android:contentDescription="@string/id"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                android:padding="5dp"
+                app:srcCompat="@android:drawable/ic_menu_search" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/checkboxGroup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/rounded_bottom"
+            android:backgroundTint="#BF121212"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <CheckBox
+                android:id="@+id/paidCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PAID"
+                android:textAlignment="center"
+                android:textColor="#F2F2F2"
+                tools:ignore="HardcodedText" />
+
+            <CheckBox
+                android:id="@+id/unPaidCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="UNPAID"
+                android:textColor="#F2F2F2"
+                tools:ignore="HardcodedText" />
+
+            <CheckBox
+                android:id="@+id/acCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AC"
+                android:textColor="#F2F2F2"
+                tools:ignore="HardcodedText" />
+
+            <CheckBox
+                android:id="@+id/nonACCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NON-AC"
+                android:textColor="#F2F2F2"
+                tools:ignore="HardcodedText" />
+        </TableRow>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="300dp"
+        android:layout_height="500dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        app:layout_constraintVertical_bias="0.05">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/allRecordView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/rounded_corners"
+                android:backgroundTint="#80121212"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:padding="10dp"
+                android:text="No records found. "
+                android:textColor="#F2F2F2"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

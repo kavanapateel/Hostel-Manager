@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_bg"
+    android:backgroundTint="#80121212"
+    android:backgroundTintMode="src_atop"
+    tools:context=".AdminWorkspace">
+
+    <ImageButton
+        android:id="@+id/openMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_borders"
+        android:backgroundTint="#80121212"
+        android:contentDescription="@string/app_name"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:rotation="90"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@android:drawable/ic_media_pause"
+        app:tint="#7C4DFF" />
+
+    <LinearLayout
+        android:id="@+id/detailsLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corners"
+        android:backgroundTint="#80121212"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.35">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="end"
+            android:padding="5dp"
+            android:paddingStart="50dp"
+            android:paddingEnd="50dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:padding="5dp"
+                android:text="Total Registrations"
+                android:textAlignment="textEnd"
+                android:textAllCaps="true"
+                android:textColor="#F2F2F2"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:ignore="HardCodedText" />
+
+            <TextView
+                android:id="@+id/studentRegisterView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_borders"
+                android:backgroundTint="#F2F2F2"
+                android:fontFamily="sans-serif-black"
+                android:padding="5dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="88"
+                android:textColor="#121212"
+                android:textSize="20sp"
+                tools:ignore="HardcodedText" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="end"
+            android:padding="5dp"
+            android:paddingStart="50dp"
+            android:paddingEnd="50dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:padding="5dp"
+                android:text="Total Rooms"
+                android:textAlignment="textEnd"
+                android:textAllCaps="true"
+                android:textColor="#F2F2F2"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:ignore="HardCodedText" />
+
+            <TextView
+                android:id="@+id/roomRegisterView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_borders"
+                android:backgroundTint="#F2F2F2"
+                android:fontFamily="sans-serif-black"
+                android:padding="5dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="88"
+                android:textColor="#121212"
+                android:textSize="20sp"
+                tools:ignore="HardcodedText" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="end"
+            android:padding="5dp"
+            android:paddingStart="50dp"
+            android:paddingEnd="50dp">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:padding="5dp"
+                android:text="Available Rooms"
+                android:textAlignment="textEnd"
+                android:textAllCaps="true"
+                android:textColor="#F2F2F2"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:ignore="HardCodedText" />
+
+            <TextView
+                android:id="@+id/availableRegisterView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_borders"
+                android:backgroundTint="#F2F2F2"
+                android:fontFamily="sans-serif-black"
+                android:padding="5dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="88"
+                android:textAlignment="textEnd"
+                android:textColor="#121212"
+                android:textSize="20sp"
+                tools:ignore="HardcodedText" />
+        </TableRow>
+
+        <Button
+            android:id="@+id/allotButton"
+            android:layout_width="250dp"
+            android:layout_height="75dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#448AFF"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:shadowColor="#121212"
+            android:shadowRadius="30"
+            android:text="Allot Rooms"
+            android:textColor="#f2f2f2"
+            android:textSize="16sp"
+            android:textStyle="bold|italic"
+            app:cornerRadius="100dp"
+            app:icon="?attr/actionModeSelectAllDrawable"
+            app:iconGravity="textStart"
+            app:iconTint="#F2F2F2"
+            app:rippleColor="#121212"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/deleteStudentButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/design_default_color_error"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:shadowColor="#121212"
+            android:shadowRadius="30"
+            android:text="Deallot Room"
+            android:textColor="#f2f2f2"
+            android:textSize="16sp"
+            android:textStyle="bold|italic"
+            app:cornerRadius="100dp"
+            app:icon="@android:drawable/ic_delete"
+            app:iconGravity="textStart"
+            app:iconPadding="2dp"
+            app:iconSize="20dp"
+            app:iconTint="#F2F2F2"
+            app:rippleColor="#121212"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/feeStatusButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/teal_200"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:shadowColor="#121212"
+            android:shadowRadius="30"
+            android:text="Fee Status"
+            android:textColor="#f2f2f2"
+            android:textSize="16sp"
+            android:textStyle="bold|italic"
+            app:cornerRadius="100dp"
+            app:icon="@drawable/payment_icon"
+            app:iconGravity="textStart"
+            app:iconPadding="2dp"
+            app:iconSize="20dp"
+            app:iconTint="#F2F2F2"
+            app:rippleColor="#121212"
+            tools:ignore="HardcodedText" />
+
+        <TableRow
+            android:id="@+id/floorRoomDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_corners"
+                android:orientation="vertical"
+                android:padding="30dp"
+                tools:ignore="UselessParent">
+
+                <Spinner
+                    android:id="@+id/floorSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/teal_200"
+                    android:dropDownSelector="@drawable/background"
+                    android:foreground="@drawable/background"
+                    android:minHeight="48dp"
+                    android:padding="5dp"
+                    android:popupBackground="#121212"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/detailsRoomStudent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="250dp"
+                            android:background="@drawable/background"
+                            android:backgroundTint="#121212"
+                            android:fontFamily="sans-serif-condensed-medium"
+                            android:padding="10dp"
+                            android:shadowColor="#00f2f2f2"
+                            android:shadowRadius="15"
+                            android:text="@android:string/unknownName"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/teal_200"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            tools:ignore="TextContrastCheck" />
+                    </LinearLayout>
+                </ScrollView>
+
+            </LinearLayout>
+        </TableRow>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/menuDrawer"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="#212121"
+        android:gravity="end"
+        android:orientation="vertical"
+        android:persistentDrawingCache="all"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="RtlSymmetry">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gradient1"
+            android:paddingEnd="10dp">
+
+            <ImageButton
+                android:id="@+id/close_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:backgroundTint="#121212"
+                android:contentDescription="@string/app_name"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@android:drawable/ic_menu_close_clear_cancel"
+                app:tint="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_rectangle"
+                android:backgroundTint="#40FFFFFF"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:gravity="fill"
+                android:padding="10dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:text="Welcome Admin001!"
+                android:textColor="#F2F2F2"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/close_menu"
+                app:layout_constraintVertical_bias="0.0"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/logout_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#00F2F2F2"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:padding="10dp"
+                android:shadowColor="#121212"
+                android:shadowRadius="30"
+                android:text="@string/logout"
+                android:textAlignment="gravity"
+                android:textColor="#F9FBE7"
+                android:textSize="16sp"
+                app:cornerRadius="?android:attr/windowTitleSize"
+                app:icon="@drawable/logout_icon"
+                app:iconGravity="textStart"
+                app:iconPadding="4dp"
+                app:iconSize="14dp"
+                app:iconTint="#f2f2f2"
+                app:iconTintMode="src_atop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/TextView"
+                app:layout_constraintVertical_bias="0.0" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center|top"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:scrollbars="vertical">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:verticalScrollbarPosition="defaultPosition"
+                tools:ignore="UselessParent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/floorRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:background="@drawable/rounded_corners"
+                        android:backgroundTint="#121212"
+                        android:backgroundTintMode="add"
+                        android:isScrollContainer="true"
+                        android:scrollbars="vertical">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                </LinearLayout>
+            </ScrollView>
+
+            <Button
+                android:id="@+id/addFloorButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:shadowColor="@color/white"
+                android:shadowRadius="30"
+                android:text="Add Floors"
+                android:textColor="#F2F2F2"
+                android:textSize="16sp"
+                android:textStyle="italic"
+                app:cornerRadius="100dp"
+                app:icon="@android:drawable/ic_input_add"
+                app:iconGravity="textStart"
+                app:iconSize="20dp"
+                app:iconTint="#F2F2F2"
+                app:iconTintMode="src_atop"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/forgotAdminPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:foregroundGravity="bottom"
+                android:padding="10dp"
+                android:text="@string/change_password"
+                android:textAlignment="center"
+                android:textColor="@color/teal_200"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/addNewFloorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/rounded_rectangle"
+        android:backgroundTint="#80f2f2f2"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TableRow
+            android:id="@+id/tableRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_borders"
+            android:backgroundTint="#121212"
+            android:gravity="center|end"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias=".2">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#121212"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                android:padding="10dp"
+                android:paddingStart="25dp"
+                android:paddingEnd="25dp"
+                android:text="Add New Floor"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="#448AFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <ImageButton
+                android:id="@+id/floorClose"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="#121212"
+                android:contentDescription="@string/app_name"
+                android:minWidth="48dp"
+                app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" />
+        </TableRow>
+
+        <TableLayout
+            android:id="@+id/tableLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tableRow"
+            app:layout_constraintVertical_bias="0.0">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="end">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="fill_vertical|end"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:text="Enter the number of floors"
+                    android:textAlignment="viewEnd"
+                    android:textColor="#121212"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/floorCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#121212"
+                    android:ems="5"
+                    android:hint="No. of Floors*"
+                    android:importantForAutofill="no"
+                    android:inputType="numberSigned"
+                    android:minHeight="48dp"
+                    android:textAlignment="center"
+                    android:textColor="#18ffff"
+                    android:textColorHint="#121212"
+                    tools:ignore="HardcodedText,TextContrastCheck" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="end">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:text="Description (if any)"
+                    android:textAlignment="textEnd"
+                    android:textColor="#121212"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/floordesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="7"
+                    android:gravity="start|top"
+                    android:hint="Floor Description"
+                    android:importantForAutofill="no"
+                    android:inputType="textMultiLine"
+                    android:minWidth="48dp"
+                    android:minHeight="48dp"
+                    android:textColor="#18FFFF"
+                    android:textColorHint="#121212"
+                    tools:ignore="HardcodedText,TextContrastCheck" />
+
+            </TableRow>
+        </TableLayout>
+
+        <Button
+            android:id="@+id/insertFloorButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#515151"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:padding="10dp"
+            android:shadowColor="#F2F2F2"
+            android:text="Add floors"
+            android:textSize="18sp"
+            app:cornerRadius="20dp"
+            app:icon="@android:drawable/ic_input_add"
+            app:iconSize="18dp"
+            app:iconTint="#f2f2f2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tableLayout"
+            app:layout_constraintVertical_bias="0.1"
+            tools:ignore="HardcodedText" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

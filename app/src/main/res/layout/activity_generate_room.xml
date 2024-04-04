@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_bg"
+    android:backgroundTint="#40F2F2F2"
+    android:backgroundTintMode="src_atop"
+    tools:context=".GenerateRoom">
+
+    <TableLayout
+        android:id="@+id/tableLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corners"
+        android:backgroundTint="#BF121212"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/floorSpanner"
+        app:layout_constraintVertical_bias="0.015">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:gravity="center_vertical|end"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:shadowColor="@color/purple_700"
+                android:shadowRadius="30"
+                android:text="number of rooms in floor"
+                android:textAllCaps="true"
+                android:textColor="#F2F2F2"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/roomTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/purple_700"
+                android:ems="2"
+                android:inputType="number|numberSigned"
+                android:minHeight="48dp"
+                android:padding="10dp"
+                android:shadowColor="@color/purple_700"
+                android:shadowRadius="30"
+                android:textAlignment="center"
+                android:textColor="#f2f2f2"
+                android:textColorHint="#121212"
+                tools:ignore="SpeakableTextPresentCheck" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:gravity="center_vertical|end"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:shadowColor="@color/purple_700"
+                android:shadowRadius="30"
+                android:text="capacity of each room"
+                android:textAlignment="textEnd"
+                android:textAllCaps="true"
+                android:textColor="#F2F2F2"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/roomCapTotal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/purple_700"
+                android:ems="2"
+                android:inputType="numberSigned"
+                android:minHeight="48dp"
+                android:shadowColor="@color/purple_700"
+                android:shadowRadius="30"
+                android:textAlignment="center"
+                android:textColor="#f2f2f2"
+                android:textColorHint="#121212"
+                tools:ignore="SpeakableTextPresentCheck" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:gravity="right|center_vertical"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:shadowColor="@color/purple_700"
+                android:shadowRadius="30"
+                android:text="Type of Room"
+                android:textAlignment="textEnd"
+                android:textAllCaps="true"
+                android:textColor="#F2F2F2"
+                android:textSize="16sp" />
+
+            <ToggleButton
+                android:id="@+id/toggleButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_borders"
+                android:backgroundTint="#803700B3"
+                android:shadowColor="#f2f2f2"
+                android:shadowRadius="25"
+                android:text="ToggleButton"
+                android:textColor="#F2F2F2"
+                android:textOff="Non-AC"
+                android:textOn="AC"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/floorSpanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corners"
+        android:backgroundTint="#BF121212"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:padding="10dp"
+        android:paddingStart="25dp"
+        android:paddingEnd="25dp"
+        android:shadowColor="@color/purple_700"
+        android:shadowRadius="30"
+        android:text="Floor 00"
+        android:textAllCaps="true"
+        android:textColor="#F2F2F2"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.25" />
+
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout2"
+        app:layout_constraintVertical_bias="0.0">
+
+        <Button
+            android:id="@+id/insertButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#313131"
+            android:enabled="false"
+            android:text="Insert"
+            app:cornerRadius="10dp"
+            app:icon="@android:drawable/ic_input_add"
+            app:iconGravity="textStart"
+            app:iconSize="18sp" />
+
+        <Space
+            android:layout_width="10dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/cancelButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/design_default_color_error"
+            android:text="cancel"
+            app:cornerRadius="10dp"
+            app:icon="@android:drawable/ic_menu_close_clear_cancel"
+            app:iconGravity="textStart"
+            app:iconSize="18sp" />
+    </TableRow>
+
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#40FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="?attr/actionModeCloseDrawable"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

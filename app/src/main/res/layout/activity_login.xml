@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintBG"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/register_bg"
+    tools:context=".LoginActivity">
+
+    <LinearLayout
+        android:id="@+id/loginLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corners"
+        android:backgroundTint="#BF121212"
+        android:orientation="vertical"
+        android:padding="30dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.25">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="login"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="#82B1FF"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <EditText
+            android:id="@+id/loginID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#82B1FF"
+            android:drawableStart="@drawable/icon_id"
+            android:drawablePadding="5dp"
+            android:drawableTint="#40C4FF"
+            android:ems="10"
+            android:hint="ID Number**"
+            android:importantForAutofill="no"
+            android:inputType="number|numberSigned"
+            android:minHeight="48dp"
+            android:nextFocusDown="@id/loginPassword"
+            android:selectAllOnFocus="true"
+            android:textColor="#82B1FF"
+            android:textColorHint="#40C4FF"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <EditText
+            android:id="@+id/loginPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#82B1FF"
+            android:drawableStart="@drawable/icon_password"
+            android:drawablePadding="5dp"
+            android:drawableTint="#40C4FF"
+            android:ems="10"
+            android:hint="@string/password"
+            android:importantForAutofill="no"
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+            android:selectAllOnFocus="true"
+            android:textColor="#82B1FF"
+            android:textColorHint="#40C4FF"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/login_validator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_borders"
+            android:backgroundTint="@color/design_default_color_error"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Invalid User ID and Password"
+            android:textAllCaps="true"
+            android:textColor="#f2f2f2"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/login_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#333333"
+            android:enabled="false"
+            android:fontFamily="sans-serif"
+            android:text="Login"
+            android:textColor="#212121"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:cornerRadius="10dp"
+            app:rippleColor="#212121"
+            tools:ignore="HardcodedText" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/register_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingStart="50dp"
+                android:paddingEnd="50dp"
+                android:text="@string/create_new_account"
+                android:textColor="#82B1FF"
+                android:textStyle="bold" />
+
+        </TableRow>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/registerLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corners"
+        android:backgroundTint="#BF121212"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingStart="50dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="50dp"
+        android:paddingBottom="5dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="sans-serif-condensed-light"
+            android:padding="5dp"
+            android:text="Register Details"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="#82B1FF"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <EditText
+            android:id="@+id/idEditor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#82B1FF"
+            android:ems="10"
+            android:enabled="false"
+            android:focusable="auto"
+            android:focusableInTouchMode="false"
+            android:fontFamily="sans-serif-condensed"
+            android:hint="STUDENT ID"
+            android:importantForAutofill="no"
+            android:inputType="number|numberSigned"
+            android:minHeight="48dp"
+            android:textColor="#82B1FF"
+            android:textColorHint="#40C4FF"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <EditText
+            android:id="@+id/passwordEditor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#82B1FF"
+            android:ems="10"
+            android:hint="Enter New Password"
+            android:importantForAutofill="no"
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+            android:selectAllOnFocus="true"
+            android:textColor="#82B1FF"
+            android:textColorHint="#40C4FF"
+            tools:ignore="HardcodedText" />
+
+        <EditText
+            android:id="@+id/studentNameEditor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#82B1FF"
+            android:ems="10"
+            android:hint="Enter your name"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:selectAllOnFocus="true"
+            android:textColor="#82B1FF"
+            android:textColorHint="#40C4FF"
+            tools:ignore="HardcodedText" />
+
+        <EditText
+            android:id="@+id/parentNameEditor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#82B1FF"
+            android:ems="10"
+            android:hint="Enter Parent name"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:selectAllOnFocus="true"
+            android:textColor="#82B1FF"
+            android:textColorHint="#40C4FF"
+            tools:ignore="HardcodedText" />
+
+        <EditText
+            android:id="@+id/contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#82B1FF"
+            android:ems="10"
+            android:hint="Enter contact number"
+            android:importantForAutofill="no"
+            android:inputType="phone"
+            android:maxLength="10"
+            android:minHeight="48dp"
+            android:selectAllOnFocus="true"
+            android:textColor="#82B1FF"
+            android:textColorHint="#40C4FF"
+            tools:ignore="HardcodedText" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_borders"
+            android:gravity="center_vertical|end">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="@string/room_type"
+                android:textColor="#82B1FF"
+                android:textSize="20sp" />
+
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="wrap_content" />
+
+            <ToggleButton
+                android:id="@+id/room_toggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_borders"
+                android:backgroundTint="#BF82B1FF"
+                android:fontFamily="sans-serif-black"
+                android:textAlignment="center"
+                android:textColor="#121212"
+                android:textOff="Non-AC"
+                android:textOn="AC"
+                android:textSize="16sp"
+                tools:ignore="HardcodedText" />
+        </TableRow>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="10dp" />
+
+        <Button
+            android:id="@+id/registerButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#333333"
+            android:enabled="false"
+            android:fontFamily="sans-serif"
+            android:text="Register"
+            android:textColor="#212121"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:cornerRadius="10dp"
+            app:rippleColor="#212121"
+            tools:ignore="HardcodedText" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Already have an account?"
+            android:textAlignment="center"
+            android:textColor="#448AFF"
+            android:textSize="16sp"
+            android:textStyle="italic"
+            tools:ignore="HardcodedText,TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/login_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/login_here"
+            android:textColor="#40C4FF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="10dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/forgotPasswordLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corners"
+        android:backgroundTint="#BF121212"
+        android:orientation="vertical"
+        android:padding="30dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.292">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="New Password"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="#82B1FF"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="20dp" />
+
+        <EditText
+            android:id="@+id/forgotID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#82B1FF"
+            android:ems="10"
+            android:hint="ID Number**"
+            android:importantForAutofill="no"
+            android:inputType="number|numberSigned"
+            android:minHeight="48dp"
+            android:textColor="#82B1FF"
+            android:textColorHint="#40C4FF"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="10dp" />
+
+        <EditText
+            android:id="@+id/forgotPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#82B1FF"
+            android:ems="10"
+            android:hint="@string/password"
+            android:importantForAutofill="no"
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+            android:textColor="#82B1FF"
+            android:textColorHint="#40C4FF"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/forgot_validator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_borders"
+            android:backgroundTint="@color/design_default_color_error"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Old Password cannot be same as New Password"
+            android:textAllCaps="true"
+            android:textColor="#f2f2f2"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/forgot_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#333333"
+            android:enabled="false"
+            android:fontFamily="sans-serif"
+            android:text="Update Password"
+            android:textColor="#212121"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:cornerRadius="10dp"
+            app:rippleColor="#212121"
+            tools:ignore="HardcodedText" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
